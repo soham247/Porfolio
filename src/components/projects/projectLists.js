@@ -11,7 +11,7 @@ export const projects = [
         gitHubLink: "https://github.com/soham247/Weather-App"
     }, 
     {
-        image: "",
+        image: ticTacToe,
         name: "Portfolio website",
         technologies: ["React.js"],
         description: "A web application that provides real-time weather updates, including temperature, humidity, and wind speed, based on user-inputted city names.",
