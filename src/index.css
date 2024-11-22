@@ -20,3 +20,7 @@ body {
 ::-webkit-scrollbar-track {
     background: transparent;
 }
+
+.slick-slide > div {
+    margin: 0 10px;
+}

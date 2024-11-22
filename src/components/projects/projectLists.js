@@ -1,5 +1,6 @@
 import weatherapp from "../../assets/projectImg/weatherapp.png"
 import ticTacToe from "../../assets/projectImg/tic-tac-toe.png"
+import portfolio from "../../assets/projectImg/portfolio.png"
 
 export const projects = [
     {
@@ -11,10 +12,10 @@ export const projects = [
         gitHubLink: "https://github.com/soham247/Weather-App"
     }, 
     {
-        image: ticTacToe,
+        image: portfolio,
         name: "Portfolio website",
         technologies: ["React.js"],
-        description: "A web application that provides real-time weather updates, including temperature, humidity, and wind speed, based on user-inputted city names.",
+        description: "A web based portfolio website to showcase my projects and skills.",
         gitHubLink: "https://github.com/soham247/Portfolio-website"
     },
     {

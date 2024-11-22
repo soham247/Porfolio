@@ -4,6 +4,11 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { best } from "./projects/projectLists";
 import ProjectCard from "./projects/ProjectCard";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { TypeAnimation } from "react-type-animation";
+
 
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
@@ -64,6 +69,33 @@ function Home() {
     { scope: container }
   );
 
+  var settings = {
+    className: "center",
+    dots: true,
+    centerMode: true,
+    infinite: true,
+    centerPadding: "150px",
+    slidesToShow: 1,
+    speed: 500,
+    draggable: true,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          centerPadding: "40px",
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          centerPadding: "10px",
+        }
+      },
+    ]
+  };
+
   return (
     <div ref={container} className="text-white mt-20 md:mt-0 mx-10">
       <div className="md:flex">
@@ -80,7 +112,19 @@ function Home() {
           <h2 id="last-name" className="text-5xl md:text-6xl font-bold mb-6">
             SADHUKHAN
           </h2>
-          <p className="popup">A passionate MERN stack developer</p>
+          <p className="popup text-xl">A passionate <span className="text-orange-300 font-comic font-bold text-xs">
+          <TypeAnimation
+      sequence={[
+        'Full Stack Web Developer',
+        1000,
+        'Open Source Contributor',
+        1000,
+      ]}
+      wrapper="span"
+      speed={50}
+      repeat={Infinity}
+    />
+            </span></p>
 
           <div className="flex popup mt-6 gap-5 items-center">
             <a href="https://github.com/soham247" target="_blank">
@@ -111,12 +155,20 @@ function Home() {
 
       <div id="top-projects">
         <h2 className="text-5xl font-bold mt-16 text-center">Top Projects</h2>
-        <div className="w-[90%] lg:w-4/5 mx-auto mt-10 md:flex">
+        <div className="w-[95%] md:w-3/5 mx-auto my-10">
+          
+          <Slider {...settings}>
           {best.map((project, index) => (
             <ProjectCard key={index} project={project} />
           ))}
+          </Slider>
+          
         </div>
       </div>
+
+      {/* <div>
+        <h1>Achievements</h1>
+      </div> */}
     </div>
   );
 }
