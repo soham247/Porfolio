@@ -26,7 +26,7 @@ function Navbar() {
     <nav className="w-full py-5 fixed z-10 backdrop-blur-md flex flex-col justify-center items-center">
         <div className="w-full flex justify-between md:justify-around ">
             <Link to="/">
-                <h1 className="text-3xl text-white font-bold mr-5 md:mr-0">Ss.</h1>
+                <h1 className="text-3xl text-white font-bold ml-5 md:ml-0">Ss.</h1>
             </Link>
 
             <ul className=" items-center  gap-8 hidden md:flex text-lg">
@@ -98,7 +98,7 @@ function Navbar() {
             </ul>
 
             <button
-            className="md:hidden flex flex-col space-y-1 focus:outline-none"
+            className="md:hidden flex flex-col space-y-1 focus:outline-none mr-5"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle Menu"
             >

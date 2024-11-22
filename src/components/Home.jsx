@@ -8,7 +8,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { TypeAnimation } from "react-type-animation";
-
+import Snowfall from "react-snowfall";
 
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
@@ -98,9 +98,10 @@ function Home() {
 
   return (
     <div ref={container} className="text-white mt-20 md:mt-0 mx-10">
+      <Snowfall wind={[0.5,2]} />
       <div className="md:flex">
         <div className="w-[100%] md:w-[50%] flex justify-center items-center mt-10 md:mt-0">
-          <div className="breathe w-[150px] md:w-[250px] h-[150px] md:h-[250px] bg-blue-500 rounded-full"></div>
+          <div className="breathe w-[150px] md:w-[250px] h-[150px] md:h-[250px] bg-blue-500 rounded-full shadow-yellow-glow"></div>
         </div>
         <div className="mt-16 md:mt-36">
           <h3 id="title" className="text-3xl font-bold ml-3 mb-5">
@@ -112,7 +113,7 @@ function Home() {
           <h2 id="last-name" className="text-5xl md:text-6xl font-bold mb-6">
             SADHUKHAN
           </h2>
-          <p className="popup text-xl">A passionate <span className="text-orange-300 font-comic font-bold text-xs">
+          <p className="popup text-xl">A passionate <span className="text-orange-500 font-comic font-bold">
           <TypeAnimation
       sequence={[
         'Full Stack Web Developer',
