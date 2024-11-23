@@ -1,30 +1,51 @@
 import React from 'react'
 import { useState } from 'react';
-
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.min.css';
 export default function Contact() {
-    const [result, setResult] = useState("");
+
+    const notify = (message) => toast(message);
   
     const onSubmit = async (event) => {
       event.preventDefault();
-      setResult("Sending....");
       const formData = new FormData(event.target);
   
       formData.append("access_key", import.meta.env.VITE_WEB3FORMS_ACCESS_KEY);
   
-      const response = await fetch(import.meta.env.VITE_WEB3FORMS_URL, {
-        method: "POST",
-        body: formData
-      });
-  
+      const toastId = toast.loading("Sending...");
+
+      try {
+        const response = await fetch(import.meta.env.VITE_WEB3FORMS_URL, {
+          method: "POST",
+          body: formData,
+        });
+
       const data = await response.json();
-  
+
       if (data.success) {
-        setResult("Form Submitted Successfully");
+        toast.update(toastId, {
+          render: "Form Submitted Successfully",
+          type: "success",
+          isLoading: false,
+          autoClose: 3000,
+        });
         event.target.reset();
       } else {
-        console.log("Error", data);
-        setResult(data.message);
+        toast.update(toastId, {
+          render: data.message,
+          type: "error",
+          isLoading: false,
+          autoClose: 3000,
+        });
       }
+    } catch (error) {
+      toast.update(toastId, {
+        render: "An error occurred while submitting the form.",
+        type: "error",
+        isLoading: false,
+        autoClose: 3000,
+      });
+    }
     };
   
     return (
@@ -56,10 +77,9 @@ export default function Contact() {
                 <label htmlFor="message">Your Message:</label>
                 <textarea className='mb-4 bg-transparent border border-white p-2 rounded' name="message" required placeholder='Message'></textarea>
 
-                <button type="submit" className='bg-blue-950 py-2 px-4 rounded'>Submit</button>
-
+                <button type="submit" className='bg-blue-950 py-2 px-4 rounded' >Submit</button>
+                <ToastContainer theme='colored' />
             </form>
-            <p className='text-center my-2'>{result}</p>
         </div>
       </div>
     );

@@ -5,24 +5,6 @@ function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    // <div className={`w-full flex justify-between md:justify-around py-5 fixed z-10 backdrop-blur-md ${(isOpen)? "" : "items-center" }`}>
-        
-    //     <Link to="/">
-    //         <h1 className="text-3xl text-white font-bold mr-5 md:mr-0">Ss.</h1>
-    //     </Link>
-
-    //     <nav className={"md:hidden ml-5 md:ml-0"}>
-    //         
-    //         <div }>
-    //         
-    //         </div>
-    //     </nav>
-
-    //     <nav className="">
-    //         
-    //     </nav>
-      
-    // </div>
     <nav className="w-full py-5 fixed z-10 backdrop-blur-md flex flex-col justify-center items-center">
         <div className="w-full flex justify-between md:justify-around ">
             <Link to="/">
@@ -48,7 +30,7 @@ function Navbar() {
                     <NavLink
                     to="/about"
                     className={({ isActive }) =>
-                        `hover:underline hover:cursor-pointer hover:text-yellow-300 hover:scale-110 ${
+                        `hover:cursor-pointer hover:text-yellow-300 hover:scale-110 ${
                         isActive ? "text-yellow-300" : "text-white"
                         }`
                     }
@@ -61,7 +43,7 @@ function Navbar() {
                     <NavLink
                     to="/skills"
                     className={({ isActive }) =>
-                        `hover:underline hover:cursor-pointer hover:text-yellow-300 hover:scale-110 ${
+                        `hover:cursor-pointer hover:text-yellow-300 hover:scale-110 ${
                         isActive ? "text-yellow-300" : "text-white"
                         }`
                     }
@@ -74,7 +56,7 @@ function Navbar() {
                     <NavLink
                     to="/projects"
                     className={({ isActive }) =>
-                        `hover:underline hover:cursor-pointer hover:text-yellow-300 hover:scale-110 ${
+                        `hover:cursor-pointer hover:text-yellow-300 hover:scale-110 ${
                         isActive ? "text-yellow-300" : "text-white"
                         }`
                     }
@@ -87,7 +69,7 @@ function Navbar() {
                     <NavLink
                     to="/contact"
                     className={({ isActive }) =>
-                        `hover:underline hover:cursor-pointer hover:text-yellow-300 hover:scale-110 ${
+                        `hover:cursor-pointer hover:text-yellow-300 hover:scale-110 ${
                         isActive ? "text-yellow-300" : "text-white"
                         }`
                     }
