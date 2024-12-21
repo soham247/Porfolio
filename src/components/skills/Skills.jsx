@@ -44,7 +44,7 @@ function Skills() {
             {skills.map((skill) => (
                 <div key={useId()} className='w-[25%] md:w-[15%] flex flex-col items-center m-2 p-2 rounded-2xl hover:scale-110 duration-300'>
                     <i className={`${skill.icon} text-5xl lg:text-6xl`}></i>                    
-                    <h3 className='text-white text-xl mt-2'>{skill.name}</h3>
+                    <h3 className='text-white text-center text-lg mt-2'>{skill.name}</h3>
                 </div>
             ))}
         </div>
