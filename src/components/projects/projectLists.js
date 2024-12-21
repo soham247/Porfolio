@@ -16,6 +16,7 @@ export const projects = [
         name: "Portfolio website",
         technologies: ["React.js"],
         description: "A web based portfolio website to showcase my projects and skills.",
+        liveLink:"https://soham-sadhukhan.vercel.app/",
         gitHubLink: "https://github.com/soham247/Portfolio-website"
     },
     {
@@ -27,6 +28,6 @@ export const projects = [
     }
 ]
 
-const bestInd = [0, 1, 2]
+const bestInd = [0, 1]
 
 export const best = projects.filter((_, index) => bestInd.includes(index))

@@ -1,5 +1,6 @@
 import React, { useId } from "react";
 import Technologies from "./Technologies";
+import { ExternalLink, Github } from "lucide-react";
 
 function ProjectCard({ project }) {
   return (
@@ -18,17 +19,19 @@ function ProjectCard({ project }) {
           <a
             href={project.liveLink}
             target="_blank"
-            className="text-white p-2 rounded-md border border-emerald-100"
-          >
-            Visit Site
+            className="text-white p-2 rounded-md border border-emerald-100 flex gap-2 hover:bg-white hover:text-black duration-500"
+            >
+            <span>Visit Site</span>
+            <ExternalLink size={20} />
           </a>
         )}
         <a
           href={project.gitHubLink}
           target="_blank"
-          className="text-white p-2 rounded-md border border-emerald-100"
+          className="text-white p-2 rounded-md border border-emerald-100 flex gap-2 items-center hover:bg-white hover:text-black duration-500"
         >
-          Github
+          <Github size={20} />
+          GitHub
         </a>
       </div>
     </div>
