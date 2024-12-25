@@ -98,7 +98,7 @@ function Home() {
 
   return (
     <div ref={container} className="text-white my-20 md:mt-0 mx-10">
-      <Snowfall wind={[0.5, 2]} />
+      <Snowfall wind={[0.5, 2]} snowflakeCount={75} />
       <div className="md:flex">
         <div className="w-[100%] md:w-[50%] flex justify-center items-center">
           <div className="breathe w-[170px] md:w-[250px] h-[170px] md:h-[250px] bg-blue-800/90 rounded-full shadow-yellow-glow flex justify-center items-center">
