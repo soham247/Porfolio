@@ -8,9 +8,6 @@ Welcome to my personal portfolio project! This repository showcases my skills, p
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Getting Started](#getting-started)
-- [Usage](#usage)
-- [License](#license)
-- [Contact](#contact)
 
 ## About
 
