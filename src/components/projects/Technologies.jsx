@@ -2,7 +2,7 @@ import React, { useId } from 'react'
 
 function Technologies({ technologies }) {
     return (
-        <div className='flex gap-2'>
+        <div className='flex flex-wrap justify-center gap-2'>
             {technologies.map((technology) => (
                 <p 
                 key={useId()}
