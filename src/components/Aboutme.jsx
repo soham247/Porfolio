@@ -30,7 +30,7 @@ function Aboutme() {
     return (
         <div className='py-20' ref={container}>
             <div className='flex items-center gap-10'>
-                <h2 className='text-5xl sm:text-7xl text-white font-bold ml-5 lg:ml-14' id='heading'><span className='text-7xl sm:text-9xl'>A</span>bout Me</h2>
+                <h1 className='text-5xl sm:text-7xl text-white font-bold ml-5 lg:ml-14' id='heading'><span className='text-7xl sm:text-9xl'>A</span>bout Me</h1>
                 <div className='sm:w-2/5 md:w-2/5 lg:w-3/5 h-[2px] bg-white mt-14' id='line'></div>
             </div>
             <div className='w-[90%] lg:w-4/5 mx-auto shadow-2xl p-10 rounded-3xl my-20 border border-purple-500' id='text-container'>

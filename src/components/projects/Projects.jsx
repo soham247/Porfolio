@@ -31,10 +31,10 @@ function Projects() {
 
     return (
         <div
-        className='w-4/5 mx-auto my-10' ref={container}
+        className='w-4/5 mx-auto py-10' ref={container}
         >
             <div className='flex items-center gap-10 mt-10 mb-16'>
-                <h2 className='text-5xl sm:text-7xl text-white font-bold ml-5 lg:ml-14' id='heading'><span className='text-7xl sm:text-9xl'>P</span>rojects</h2>
+                <h1 className='text-5xl sm:text-7xl text-white font-bold ml-5 lg:ml-14' id='heading'><span className='text-7xl sm:text-9xl'>P</span>rojects</h1>
                 <div className='sm:w-2/5 md:w-2/5 lg:w-3/5 h-[2px] bg-white mt-14' id='line'></div>
             </div>
             <div

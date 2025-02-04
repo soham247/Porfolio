@@ -1,8 +1,16 @@
 import weatherapp from "../../assets/projectImg/weatherapp.png"
-import ticTacToe from "../../assets/projectImg/tic-tac-toe.png"
 import portfolio from "../../assets/projectImg/portfolio.png"
+import muse from "../../assets/projectImg/Muse.png"
 
 export const projects = [
+    {
+        image: muse,
+        name: "Muse",
+        technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "Tailwind CSS"],
+        description: "A modern blogging platform that allows users to create and share their thoughts, ideas, and experiences with other users.",
+        liveLink: "https://muse-lemon.vercel.app/",
+        gitHubLink: "https://github.com/soham247/muse"
+    },
     {
         image: weatherapp,
         name: "Weather App",
@@ -14,20 +22,13 @@ export const projects = [
     {
         image: portfolio,
         name: "Portfolio website",
-        technologies: ["React.js"],
+        technologies: ["React.js", "Tailwind CSS"],
         description: "A web based portfolio website to showcase my projects and skills.",
-        liveLink:"https://soham-sadhukhan.vercel.app/",
-        gitHubLink: "https://github.com/soham247/Portfolio-website"
+        liveLink:"https://sohamsadhukhan.vercel.app/",
+        gitHubLink: "https://github.com/soham247/Porfolio"
     },
-    {
-        image: ticTacToe,
-        name: "Tic-Tac-Toe",
-        technologies: ["HTML", "CSS", "JavaScript"],
-        description: "A web based tic tac toe two player game",
-        gitHubLink: "https://github.com/soham247/Tic-Tac-Toe"
-    }
 ]
 
-const bestInd = [0, 1]
+const bestInd = [0, 1, 2]
 
 export const best = projects.filter((_, index) => bestInd.includes(index))
